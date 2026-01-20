@@ -95,5 +95,5 @@ This prevents:
 
 ### 1. Create Virtual Environment
 ```bash
-python -m venv pose_env
+py -3.12 -m venv pose_env 
 pose_env\Scripts\activate
