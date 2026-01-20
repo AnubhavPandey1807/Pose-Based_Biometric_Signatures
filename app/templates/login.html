@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Secure Login Portal</title>
+
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+
+<body>
+  <main class="auth-container">
+    <h1>Restricted Access</h1>
+    <p class="subtitle">Identity verification required</p>
+
+    <form id="loginForm">
+      <input
+        type="text"
+        name="username"
+        placeholder="Codename"
+        autocomplete="username"
+        required
+      />
+
+      <input
+        type="password"
+        name="password"
+        placeholder="Passphrase"
+        autocomplete="current-password"
+        required
+      />
+
+      <p class="pose-instruction">
+        Reproduce your registered posture for biometric validation.
+      </p>
+
+      <video id="video" autoplay muted playsinline></video>
+
+      <div class="button-group">
+        <button type="button" onclick="capturePose('login')">
+          Capture Pose
+        </button>
+
+        <button type="submit" class="primary">
+          Authenticate
+        </button>
+      </div>
+    </form>
+
+    <div class="divider"></div>
+
+    <p class="register-hint">New operative?</p>
+
+    <button
+      class="secondary"
+      onclick="window.location.href='/register'"
+    >
+      Create Clearance Profile
+    </button>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

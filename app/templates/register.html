@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Clearance Registration</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+
+<body>
+  <main class="auth-container">
+    <h1>Clearance Enrollment</h1>
+    <p class="subtitle">
+      Biometric + credential profile initialization
+    </p>
+
+    <form id="registerForm">
+      <input
+        type="text"
+        name="username"
+        placeholder="Choose Codename"
+        required
+      />
+
+      <input
+        type="password"
+        name="password"
+        placeholder="Create Passphrase"
+        required
+      />
+
+      <p class="pose-instruction">
+        When recording begins, raise and lower your right hand slowly.
+      </p>
+
+      <video id="video" autoplay muted></video>
+
+      <div class="button-group">
+        <button type="button" onclick="capturePose('register')">
+          Capture Pose
+        </button>
+
+        <button type="submit" class="primary">
+          Register Profile
+        </button>
+      </div>
+    </form>
+
+    <div class="divider"></div>
+
+    <p class="register-hint">Already cleared?</p>
+
+    <button
+      class="secondary"
+      onclick="window.location.href='/'"
+    >
+      Return to Login
+    </button>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

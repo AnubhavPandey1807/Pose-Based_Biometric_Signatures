@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>RAW Internal Dashboard</title>
+
+  <!-- Correct FastAPI static path -->
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+
+<body class="classified">
+
+  <main class="dashboard-container">
+
+    <header class="dashboard-header">
+      <h1>RESTRICTED – RAW INTERNAL</h1>
+      <p class="access-line">
+        Access Level: <span class="redacted">███████</span>
+        &nbsp;|&nbsp;
+        Clearance Code: <span class="status-active">ACTIVE</span>
+      </p>
+    </header>
+
+    <section class="intel-panel">
+      <ul class="intel-list">
+        <li>
+          <span class="label">Operation</span>
+          <span class="value">Sandstorm</span>
+          <span class="status-active">ACTIVE</span>
+        </li>
+
+        <li>
+          <span class="label">Signal Node</span>
+          <span class="value">DELHI-X</span>
+        </li>
+
+        <li>
+          <span class="label">Threat Index</span>
+          <span class="status-warning">MODERATE</span>
+        </li>
+      </ul>
+    </section>
+
+    <footer class="dashboard-footer">
+      <button class="danger" onclick="logout()">Logout</button>
+    </footer>
+
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
